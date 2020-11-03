@@ -1,1 +1,5 @@
-This is a test
+---
+title: TEST
+layout: template
+filename: test.md 
+--- 
