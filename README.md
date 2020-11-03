@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Welcome to Aditya Bhamidipati's Profile
 
 You can use the [editor on GitHub](https://github.com/adityabham/adityabham.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
