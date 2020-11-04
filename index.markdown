@@ -3,5 +3,6 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: page
-title: More stuff
+title: About
 ---
+![Alt Text](https://media-exp1.licdn.com/dms/image/C5603AQEuCbsJ0Ipa_Q/profile-displayphoto-shrink_200_200/0?e=1609977600&v=beta&t=0r7Ux44ojKAF3iR60fu6dtI5L9YXI_EWVB_5qh6mGJc)
