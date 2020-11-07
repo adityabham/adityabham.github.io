@@ -16,7 +16,7 @@ Implements machine learning and data analytics pipelines utilizing Python across
 #### [Northeastern University College of Engineering](https://coe.northeastern.edu/) 
 _Boston, MA_ _September 2020-Present_                 
 ***Course Assistant- Department of Electrical & Computer Engineering***<br/>
-EECE 2520: Fundamentals of Linear Systems
+EECE 2520: Fundamentals of Linear Systems 
 - Holds office hours to provide help for students on MATLAB-related material. 
 - Grades homework problems and provides written feedback. 
 

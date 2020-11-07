@@ -21,12 +21,11 @@
 title: Aditya Bhamidipati
 email: bhamidipati.a@northeastern.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  I'm currently an undergraduate at Northeastern University studying Electrical Engineering.
-  My research interests include: Machine Learning, Bayesian Statistics & Signal Processing
+  Electrical Engineering Student at Northeastern University | Machine Intelligence Intern at Draper
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 linkedin_username: adityabham
-github_username:  adityabham
+facebook_username:  adityabham
 
 # Build settings
 theme: minima
