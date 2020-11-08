@@ -4,23 +4,142 @@ title:  "Gaussian Process Particle Filter (GPPF)"
 date:   2020-11-04 19:40:06 -0500
 categories: GPPF
 ---
-Description 
-------
+### Description 
+
 Topic: Enhancing Particle Filtering using Gaussian Processes
-- Goal: Present an approach to Sequential Bayesian filtering that leverages both Monte Carlo algorithms and Gaussian process regression.
-- Developed a Gaussian Process Particle Filter (GPPF) and resampling scheme utilizing Python and MATLAB to more accurately approximate the posterior distribution of some stochastic process from a set of random measures while addressing the issue of particle degeneracy in the context of Bayesian inference.
-- In the process of generating a simulation, in Python, of a robot moving throughout a grid where the GPPF is utilized to estimate and track the robot’s position quantifying the performance of the GPPF.
+- Collaborating with Dr. Pau Closas and Dr. Tales Imbiriba to present an approach to Bayesian recursive estimation 
+(Bayesian filtering) that leverages both Sequential Monte Carlo methods 
+(particle filters) and Gaussian process regression in the context of Bayesian inference.
+- Developing a “Gaussian Process Particle Filter” (GPPF) algorithm utilizing Python and MATLAB 
+to more accurately approximate the posterior probability distribution of some stochastic process 
+given a set of observed measurements.
+- Currently in the process of creating a robot localization simulation to quantify the performance of the GPPF.
 
-![test](https://imgur.com/LX4r3cq)
+### Algorithm Architecture  
 
-`MARKUP`
+<div class="post-content">
+    <p align="center">
+    <img src="https://i.ibb.co/1smLBGB/LX4r3cq-Imgur.png" alt="Alt Text" /></p>
+</div>
 
+### Simple GPPF Example  
+
+Here is a high-level GPPF model built using preexisting Python modules and simple robot localization use case. 
+The purpose of this example is to utilize the GPPF model to estimate the states of a robot moving through 
+an arbitrary grid. This example is adapted from 
+[here](https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python/blob/24b9fb3cf756b3c765579decd624132efe7be374/experiments/RobotLocalizationParticleFilter.py#L25).
+
+`pf.py`
 {% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+import numpy as np
+from numpy.random import uniform, randn
+from numpy.linalg import norm
+import scipy.stats
+from sklearn.gaussian_process import GaussianProcessRegressor
+from sklearn.gaussian_process.kernels import RBF
+
+def create_particles(N, x, y):
+    # Create a set of Particles
+    particles = np.empty((N, 2))
+    particles[:, 0] = uniform(x[0], x[1], size=N)
+    particles[:, 1] = uniform(y[0], y[1], size=N)
+    return particles
+
+def predict(particles, std, dt):
+    # Propagate particles forward one time step accounting for standard deviation
+    x = dt + (randn(len(particles)) * std[0])
+    y = dt + (randn(len(particles)) * std[1])
+    particles[:, 0] += x
+    particles[:, 1] += y
+
+def update(particles, weights, observation, known_locations):
+    # Update particle weights based on observations
+    weights.fill(1.)
+    for i, known_locations in enumerate(known_locations):
+        diff = norm(particles[:, 0:2] - known_locations, axis=1)
+        pdf_in = observation[i]
+        pdfs = scipy.stats.norm(diff).pdf(pdf_in)
+        weights *= pdfs
+    weights += 1.e-300
+    weights /= sum(weights)
+
+def effective_particles(gp_weights):
+    return 1. / np.sum(np.square(gp_weights))
+
+def estimate(particles, weights):
+    mean = np.average(particles[:], weights=weights, axis=0)
+    return mean
+
+def resample(particles, weights, indexes):
+    particles[:] = particles[indexes]
+    weights[:] = weights[indexes]
+    weights.fill(1.0 / len(weights))
+
+def gaussian_process_reg(particles, weights):
+    # GP regression
+    kernel = 1.0 * RBF(1.0)
+    gp = GaussianProcessRegressor(kernel=kernel, random_state=0)
+    gp.fit(particles, weights)
+    sampled_weights_array = gp.sample_y(particles)
+    gp_weights = []
+    for item in sampled_weights_array:
+        gp_weights.append(item[0])
+    weights[:] = gp_weights[:]
 {% endhighlight %}
 
+`robot_loc_ex.py`
+{% highlight ruby %}
+import pf as pf
+import numpy as np
+from numpy.linalg import norm
+from filterpy.monte_carlo import systematic_resample
+from matplotlib import pyplot as plt
 
+N = 500  # number of particles
+x_dim = (0, 20)
+y_dim = (0, 20)
+std = (.1, .1)
+dt = 1  # time step
+known_locations = np.array([[-1, 2], [4, 3], [-2, 10]])
+# Test Parameters
+num_of_iterations = 20
+
+particles = pf.create_particles(N=N, x=x_dim, y=y_dim)
+print('++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
+weights = np.zeros(N)
+
+robot_position = np.array([0., 0.])
+for iteration in range(num_of_iterations):
+    # Increment robot position
+    robot_position += (1, 1)
+
+    # Distance from robot to each known location
+    diff = known_locations - robot_position
+    observation = (norm(diff, axis=1))
+
+    pf.predict(particles=particles, std=std, dt=dt)
+
+    pf.update(particles=particles, weights=weights, observation=observation,
+              known_locations=known_locations)
+
+    pf.gaussian_process_reg(particles=particles, weights=weights)
+
+    # state estimation
+    mean = pf.estimate(particles, weights)
+    p1 = plt.scatter(robot_position[0], robot_position[1], marker='+', color='k')
+    p2 = plt.scatter(mean[0], mean[1], marker='s', color='r')
+
+    # Resampling
+    if pf.effective_particles(weights) < N / 2:
+        print('Resampling... %s' % iteration)
+        indexes = systematic_resample(weights)
+        pf.resample(particles, weights, indexes)
+
+    print('++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
+{% endhighlight %}
+
+`Results`
+<div class="post-content">
+    <p align="center">
+    <img src="https://i.ibb.co/p46kK2S/Screen-Shot-2020-11-08-at-12-11-26-PM.png" alt="Alt Text" /></p>
+</div>

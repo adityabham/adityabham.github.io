@@ -7,8 +7,8 @@
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Gaussian Process Particle Filter (GPPF)" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Description Topic: Enhancing Particle Filtering using Gaussian Processes Goal: Present an approach to Sequential Bayesian filtering that leverages both Monte Carlo algorithms and Gaussian process regression. Developed a Gaussian Process Particle Filter (GPPF) and resampling scheme utilizing Python and MATLAB to more accurately approximate the posterior distribution of some stochastic process from a set of random measures while addressing the issue of particle degeneracy in the context of Bayesian inference. In the process of generating a simulation, in Python, of a robot moving throughout a grid where the GPPF is utilized to estimate and track the robot’s position quantifying the performance of the GPPF." />
-<meta property="og:description" content="Description Topic: Enhancing Particle Filtering using Gaussian Processes Goal: Present an approach to Sequential Bayesian filtering that leverages both Monte Carlo algorithms and Gaussian process regression. Developed a Gaussian Process Particle Filter (GPPF) and resampling scheme utilizing Python and MATLAB to more accurately approximate the posterior distribution of some stochastic process from a set of random measures while addressing the issue of particle degeneracy in the context of Bayesian inference. In the process of generating a simulation, in Python, of a robot moving throughout a grid where the GPPF is utilized to estimate and track the robot’s position quantifying the performance of the GPPF." />
+<meta name="description" content="Description" />
+<meta property="og:description" content="Description" />
 <link rel="canonical" href="http://localhost:4000/gppf/2020/11/04/GPPF.html" />
 <meta property="og:url" content="http://localhost:4000/gppf/2020/11/04/GPPF.html" />
 <meta property="og:site_name" content="Aditya Bhamidipati" />
@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Gaussian Process Particle Filter (GPPF)" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/gppf/2020/11/04/GPPF.html","headline":"Gaussian Process Particle Filter (GPPF)","dateModified":"2020-11-04T19:40:06-05:00","datePublished":"2020-11-04T19:40:06-05:00","description":"Description Topic: Enhancing Particle Filtering using Gaussian Processes Goal: Present an approach to Sequential Bayesian filtering that leverages both Monte Carlo algorithms and Gaussian process regression. Developed a Gaussian Process Particle Filter (GPPF) and resampling scheme utilizing Python and MATLAB to more accurately approximate the posterior distribution of some stochastic process from a set of random measures while addressing the issue of particle degeneracy in the context of Bayesian inference. In the process of generating a simulation, in Python, of a robot moving throughout a grid where the GPPF is utilized to estimate and track the robot’s position quantifying the performance of the GPPF.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/gppf/2020/11/04/GPPF.html"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"headline":"Gaussian Process Particle Filter (GPPF)","url":"http://localhost:4000/gppf/2020/11/04/GPPF.html","dateModified":"2020-11-04T19:40:06-05:00","datePublished":"2020-11-04T19:40:06-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/gppf/2020/11/04/GPPF.html"},"description":"Description","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Aditya Bhamidipati" /></head>
 <body><header class="site-header" role="banner">
@@ -47,24 +47,145 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <h2 id="description">Description</h2>
+    <h3 id="description">Description</h3>
+
 <p>Topic: Enhancing Particle Filtering using Gaussian Processes</p>
 <ul>
-  <li>Goal: Present an approach to Sequential Bayesian filtering that leverages both Monte Carlo algorithms and Gaussian process regression.</li>
-  <li>Developed a Gaussian Process Particle Filter (GPPF) and resampling scheme utilizing Python and MATLAB to more accurately approximate the posterior distribution of some stochastic process from a set of random measures while addressing the issue of particle degeneracy in the context of Bayesian inference.</li>
-  <li>In the process of generating a simulation, in Python, of a robot moving throughout a grid where the GPPF is utilized to estimate and track the robot’s position quantifying the performance of the GPPF.</li>
+  <li>Collaborating with Dr. Pau Closas and Dr. Tales Imbiriba to present an approach to Bayesian recursive estimation 
+(Bayesian filtering) that leverages both Sequential Monte Carlo methods 
+(particle filters) and Gaussian process regression in the context of Bayesian inference.</li>
+  <li>Developing a “Gaussian Process Particle Filter” (GPPF) algorithm utilizing Python and MATLAB 
+to more accurately approximate the posterior probability distribution of some stochastic process 
+given a set of observed measurements.</li>
+  <li>Currently in the process of creating a robot localization simulation to quantify the performance of the GPPF.</li>
 </ul>
 
-<p><img src="https://imgur.com/LX4r3cq" alt="test" /></p>
+<h3 id="algorithm-architecture">Algorithm Architecture</h3>
 
-<p><code class="language-plaintext highlighter-rouge">MARKUP</code></p>
+<div class="post-content">
+    <p align="center">
+    <img src="https://i.ibb.co/1smLBGB/LX4r3cq-Imgur.png" alt="Alt Text" /></p>
+</div>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+<h3 id="simple-gppf-example">Simple GPPF Example</h3>
 
+<p>Here is a high-level GPPF model built using preexisting Python modules and simple robot localization use case. 
+The purpose of this example is to utilize the GPPF model to estimate the states of a robot moving through 
+an arbitrary grid. This example is adapted from 
+<a href="https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python/blob/24b9fb3cf756b3c765579decd624132efe7be374/experiments/RobotLocalizationParticleFilter.py#L25">here</a>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">pf.py</code></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">import</span> <span class="n">numpy</span> <span class="n">as</span> <span class="n">np</span>
+<span class="n">from</span> <span class="n">numpy</span><span class="p">.</span><span class="nf">random</span> <span class="n">import</span> <span class="n">uniform</span><span class="p">,</span> <span class="n">randn</span>
+<span class="n">from</span> <span class="n">numpy</span><span class="p">.</span><span class="nf">linalg</span> <span class="n">import</span> <span class="n">norm</span>
+<span class="n">import</span> <span class="n">scipy</span><span class="p">.</span><span class="nf">stats</span>
+<span class="n">from</span> <span class="n">sklearn</span><span class="p">.</span><span class="nf">gaussian_process</span> <span class="n">import</span> <span class="no">GaussianProcessRegressor</span>
+<span class="n">from</span> <span class="n">sklearn</span><span class="p">.</span><span class="nf">gaussian_process</span><span class="p">.</span><span class="nf">kernels</span> <span class="n">import</span> <span class="no">RBF</span>
+
+<span class="k">def</span> <span class="nf">create_particles</span><span class="p">(</span><span class="no">N</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="c1"># Create a set of Particles</span>
+    <span class="n">particles</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">empty</span><span class="p">((</span><span class="no">N</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+    <span class="n">particles</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">uniform</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="no">N</span><span class="p">)</span>
+    <span class="n">particles</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">uniform</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="no">N</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">particles</span>
+
+<span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="n">particles</span><span class="p">,</span> <span class="n">std</span><span class="p">,</span> <span class="n">dt</span><span class="p">):</span>
+    <span class="c1"># Propagate particles forward one time step accounting for standard deviation</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">dt</span> <span class="o">+</span> <span class="p">(</span><span class="n">randn</span><span class="p">(</span><span class="n">len</span><span class="p">(</span><span class="n">particles</span><span class="p">))</span> <span class="o">*</span> <span class="n">std</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">dt</span> <span class="o">+</span> <span class="p">(</span><span class="n">randn</span><span class="p">(</span><span class="n">len</span><span class="p">(</span><span class="n">particles</span><span class="p">))</span> <span class="o">*</span> <span class="n">std</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">particles</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">+=</span> <span class="n">x</span>
+    <span class="n">particles</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="n">y</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="n">particles</span><span class="p">,</span> <span class="n">weights</span><span class="p">,</span> <span class="n">observation</span><span class="p">,</span> <span class="n">known_locations</span><span class="p">):</span>
+    <span class="c1"># Update particle weights based on observations</span>
+    <span class="n">weights</span><span class="p">.</span><span class="nf">fill</span><span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">known_locations</span> <span class="k">in</span> <span class="n">enumerate</span><span class="p">(</span><span class="n">known_locations</span><span class="p">):</span>
+        <span class="n">diff</span> <span class="o">=</span> <span class="n">norm</span><span class="p">(</span><span class="n">particles</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">known_locations</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">pdf_in</span> <span class="o">=</span> <span class="n">observation</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">pdfs</span> <span class="o">=</span> <span class="n">scipy</span><span class="p">.</span><span class="nf">stats</span><span class="p">.</span><span class="nf">norm</span><span class="p">(</span><span class="n">diff</span><span class="p">).</span><span class="nf">pdf</span><span class="p">(</span><span class="n">pdf_in</span><span class="p">)</span>
+        <span class="n">weights</span> <span class="o">*=</span> <span class="n">pdfs</span>
+    <span class="n">weights</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">.</span><span class="nf">e</span><span class="o">-</span><span class="mi">300</span>
+    <span class="n">weights</span> <span class="o">/=</span> <span class="n">sum</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">effective_particles</span><span class="p">(</span><span class="n">gp_weights</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="p">.</span> <span class="nf">/</span> <span class="n">np</span><span class="p">.</span><span class="nf">sum</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">square</span><span class="p">(</span><span class="n">gp_weights</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">estimate</span><span class="p">(</span><span class="n">particles</span><span class="p">,</span> <span class="n">weights</span><span class="p">):</span>
+    <span class="n">mean</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">average</span><span class="p">(</span><span class="n">particles</span><span class="p">[:],</span> <span class="n">weights</span><span class="o">=</span><span class="n">weights</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">mean</span>
+
+<span class="k">def</span> <span class="nf">resample</span><span class="p">(</span><span class="n">particles</span><span class="p">,</span> <span class="n">weights</span><span class="p">,</span> <span class="n">indexes</span><span class="p">):</span>
+    <span class="n">particles</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">particles</span><span class="p">[</span><span class="n">indexes</span><span class="p">]</span>
+    <span class="n">weights</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">weights</span><span class="p">[</span><span class="n">indexes</span><span class="p">]</span>
+    <span class="n">weights</span><span class="p">.</span><span class="nf">fill</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">/</span> <span class="n">len</span><span class="p">(</span><span class="n">weights</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">gaussian_process_reg</span><span class="p">(</span><span class="n">particles</span><span class="p">,</span> <span class="n">weights</span><span class="p">):</span>
+    <span class="c1"># GP regression</span>
+    <span class="n">kernel</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">*</span> <span class="no">RBF</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span>
+    <span class="n">gp</span> <span class="o">=</span> <span class="no">GaussianProcessRegressor</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="n">kernel</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">gp</span><span class="p">.</span><span class="nf">fit</span><span class="p">(</span><span class="n">particles</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span>
+    <span class="n">sampled_weights_array</span> <span class="o">=</span> <span class="n">gp</span><span class="p">.</span><span class="nf">sample_y</span><span class="p">(</span><span class="n">particles</span><span class="p">)</span>
+    <span class="n">gp_weights</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="k">in</span> <span class="ss">sampled_weights_array:
+        </span><span class="n">gp_weights</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">weights</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">gp_weights</span><span class="p">[:]</span></code></pre></figure>
+
+<p><code class="language-plaintext highlighter-rouge">robot_loc_ex.py</code></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">import</span> <span class="n">pf</span> <span class="n">as</span> <span class="n">pf</span>
+<span class="n">import</span> <span class="n">numpy</span> <span class="n">as</span> <span class="n">np</span>
+<span class="n">from</span> <span class="n">numpy</span><span class="p">.</span><span class="nf">linalg</span> <span class="n">import</span> <span class="n">norm</span>
+<span class="n">from</span> <span class="n">filterpy</span><span class="p">.</span><span class="nf">monte_carlo</span> <span class="n">import</span> <span class="n">systematic_resample</span>
+<span class="n">from</span> <span class="n">matplotlib</span> <span class="n">import</span> <span class="n">pyplot</span> <span class="n">as</span> <span class="n">plt</span>
+
+<span class="no">N</span> <span class="o">=</span> <span class="mi">500</span>  <span class="c1"># number of particles</span>
+<span class="n">x_dim</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">y_dim</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">std</span> <span class="o">=</span> <span class="p">(</span><span class="o">.</span><span class="mi">1</span><span class="p">,</span> <span class="o">.</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># time step</span>
+<span class="n">known_locations</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">]])</span>
+<span class="c1"># Test Parameters</span>
+<span class="n">num_of_iterations</span> <span class="o">=</span> <span class="mi">20</span>
+
+<span class="n">particles</span> <span class="o">=</span> <span class="n">pf</span><span class="p">.</span><span class="nf">create_particles</span><span class="p">(</span><span class="no">N</span><span class="o">=</span><span class="no">N</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">x_dim</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y_dim</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'++++++++++++++++++++++++++++++++++++++++++++++++++++++++'</span><span class="p">)</span>
+<span class="n">weights</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">zeros</span><span class="p">(</span><span class="no">N</span><span class="p">)</span>
+
+<span class="n">robot_position</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([</span><span class="mi">0</span><span class="p">.</span><span class="nf">,</span> <span class="mi">0</span><span class="o">.</span><span class="p">])</span>
+<span class="k">for</span> <span class="n">iteration</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">num_of_iterations</span><span class="p">):</span>
+    <span class="c1"># Increment robot position</span>
+    <span class="n">robot_position</span> <span class="o">+=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1"># Distance from robot to each known location</span>
+    <span class="n">diff</span> <span class="o">=</span> <span class="n">known_locations</span> <span class="o">-</span> <span class="n">robot_position</span>
+    <span class="n">observation</span> <span class="o">=</span> <span class="p">(</span><span class="n">norm</span><span class="p">(</span><span class="n">diff</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+
+    <span class="n">pf</span><span class="p">.</span><span class="nf">predict</span><span class="p">(</span><span class="n">particles</span><span class="o">=</span><span class="n">particles</span><span class="p">,</span> <span class="n">std</span><span class="o">=</span><span class="n">std</span><span class="p">,</span> <span class="n">dt</span><span class="o">=</span><span class="n">dt</span><span class="p">)</span>
+
+    <span class="n">pf</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">particles</span><span class="o">=</span><span class="n">particles</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="n">weights</span><span class="p">,</span> <span class="n">observation</span><span class="o">=</span><span class="n">observation</span><span class="p">,</span>
+              <span class="n">known_locations</span><span class="o">=</span><span class="n">known_locations</span><span class="p">)</span>
+
+    <span class="n">pf</span><span class="p">.</span><span class="nf">gaussian_process_reg</span><span class="p">(</span><span class="n">particles</span><span class="o">=</span><span class="n">particles</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="n">weights</span><span class="p">)</span>
+
+    <span class="c1"># state estimation</span>
+    <span class="n">mean</span> <span class="o">=</span> <span class="n">pf</span><span class="p">.</span><span class="nf">estimate</span><span class="p">(</span><span class="n">particles</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span>
+    <span class="n">p1</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="nf">scatter</span><span class="p">(</span><span class="n">robot_position</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">robot_position</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s1">'+'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'k'</span><span class="p">)</span>
+    <span class="n">p2</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="nf">scatter</span><span class="p">(</span><span class="n">mean</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">mean</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s1">'s'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'r'</span><span class="p">)</span>
+
+    <span class="c1"># Resampling</span>
+    <span class="k">if</span> <span class="n">pf</span><span class="p">.</span><span class="nf">effective_particles</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span> <span class="o">&lt;</span> <span class="no">N</span> <span class="o">/</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'Resampling... %s'</span> <span class="o">%</span> <span class="n">iteration</span><span class="p">)</span>
+        <span class="n">indexes</span> <span class="o">=</span> <span class="n">systematic_resample</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span>
+        <span class="n">pf</span><span class="p">.</span><span class="nf">resample</span><span class="p">(</span><span class="n">particles</span><span class="p">,</span> <span class="n">weights</span><span class="p">,</span> <span class="n">indexes</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'++++++++++++++++++++++++++++++++++++++++++++++++++++++++'</span><span class="p">)</span></code></pre></figure>
+
+<p><code class="language-plaintext highlighter-rouge">Results</code></p>
+<div class="post-content">
+    <p align="center">
+    <img src="https://i.ibb.co/p46kK2S/Screen-Shot-2020-11-08-at-12-11-26-PM.png" alt="Alt Text" /></p>
+</div>
 
   </div><a class="u-url" href="/gppf/2020/11/04/GPPF.html" hidden></a>
 </article>
