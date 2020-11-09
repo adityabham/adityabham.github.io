@@ -5,7 +5,6 @@
 # https://aditya-bhamidipa.imgbb.com/
 layout: page
 ---
-### About Me
 
 <div class="post-content">
     <p align="center">
