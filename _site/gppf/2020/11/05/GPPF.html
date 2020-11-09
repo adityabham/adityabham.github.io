@@ -7,17 +7,17 @@
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Gaussian Process Particle Filter (GPPF)" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Description" />
-<meta property="og:description" content="Description" />
-<link rel="canonical" href="http://localhost:4000/gppf/2020/11/04/GPPF.html" />
-<meta property="og:url" content="http://localhost:4000/gppf/2020/11/04/GPPF.html" />
+<meta name="description" content="Description June 2020-Present Topic: Enhancing Particle Filtering using Gaussian Processes Collaborating under Dr. Pau Closas and Dr. Tales Imbiriba to present an approach to Bayesian recursive estimation (Bayesian filtering) that leverages both Sequential Monte Carlo methods (particle filters) and Gaussian process regression in the context of Bayesian inference. Developing a “Gaussian Process Particle Filter” (GPPF) algorithm utilizing Python and MATLAB to more accurately approximate the posterior probability distribution of some stochastic process given a set of observed measurements. Currently in the process of creating a robot localization simulation to quantify the performance of the GPPF." />
+<meta property="og:description" content="Description June 2020-Present Topic: Enhancing Particle Filtering using Gaussian Processes Collaborating under Dr. Pau Closas and Dr. Tales Imbiriba to present an approach to Bayesian recursive estimation (Bayesian filtering) that leverages both Sequential Monte Carlo methods (particle filters) and Gaussian process regression in the context of Bayesian inference. Developing a “Gaussian Process Particle Filter” (GPPF) algorithm utilizing Python and MATLAB to more accurately approximate the posterior probability distribution of some stochastic process given a set of observed measurements. Currently in the process of creating a robot localization simulation to quantify the performance of the GPPF." />
+<link rel="canonical" href="http://localhost:4000/gppf/2020/11/05/GPPF.html" />
+<meta property="og:url" content="http://localhost:4000/gppf/2020/11/05/GPPF.html" />
 <meta property="og:site_name" content="Aditya Bhamidipati" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-11-04T19:40:06-05:00" />
+<meta property="article:published_time" content="2020-11-05T19:40:06-05:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Gaussian Process Particle Filter (GPPF)" />
 <script type="application/ld+json">
-{"headline":"Gaussian Process Particle Filter (GPPF)","url":"http://localhost:4000/gppf/2020/11/04/GPPF.html","dateModified":"2020-11-04T19:40:06-05:00","datePublished":"2020-11-04T19:40:06-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/gppf/2020/11/04/GPPF.html"},"description":"Description","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"url":"http://localhost:4000/gppf/2020/11/05/GPPF.html","headline":"Gaussian Process Particle Filter (GPPF)","datePublished":"2020-11-05T19:40:06-05:00","dateModified":"2020-11-05T19:40:06-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/gppf/2020/11/05/GPPF.html"},"description":"Description June 2020-Present Topic: Enhancing Particle Filtering using Gaussian Processes Collaborating under Dr. Pau Closas and Dr. Tales Imbiriba to present an approach to Bayesian recursive estimation (Bayesian filtering) that leverages both Sequential Monte Carlo methods (particle filters) and Gaussian process regression in the context of Bayesian inference. Developing a “Gaussian Process Particle Filter” (GPPF) algorithm utilizing Python and MATLAB to more accurately approximate the posterior probability distribution of some stochastic process given a set of observed measurements. Currently in the process of creating a robot localization simulation to quantify the performance of the GPPF.","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Aditya Bhamidipati" /></head>
 <body><header class="site-header" role="banner">
@@ -42,16 +42,16 @@
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">Gaussian Process Particle Filter (GPPF)</h1>
     <p class="post-meta">
-      <time class="dt-published" datetime="2020-11-04T19:40:06-05:00" itemprop="datePublished">Nov 4, 2020
+      <time class="dt-published" datetime="2020-11-05T19:40:06-05:00" itemprop="datePublished">Nov 5, 2020
       </time></p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
     <h3 id="description">Description</h3>
-
-<p>Topic: Enhancing Particle Filtering using Gaussian Processes</p>
+<p><em>June 2020-Present</em><br />
+Topic: Enhancing Particle Filtering using Gaussian Processes</p>
 <ul>
-  <li>Collaborating with Dr. Pau Closas and Dr. Tales Imbiriba to present an approach to Bayesian recursive estimation 
+  <li>Collaborating under Dr. Pau Closas and Dr. Tales Imbiriba to present an approach to Bayesian recursive estimation 
 (Bayesian filtering) that leverages both Sequential Monte Carlo methods 
 (particle filters) and Gaussian process regression in the context of Bayesian inference.</li>
   <li>Developing a “Gaussian Process Particle Filter” (GPPF) algorithm utilizing Python and MATLAB 
@@ -168,10 +168,8 @@ an arbitrary grid. This example is adapted from
 
     <span class="n">pf</span><span class="p">.</span><span class="nf">gaussian_process_reg</span><span class="p">(</span><span class="n">particles</span><span class="o">=</span><span class="n">particles</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="n">weights</span><span class="p">)</span>
 
-    <span class="c1"># state estimation</span>
+    <span class="c1"># State estimation</span>
     <span class="n">mean</span> <span class="o">=</span> <span class="n">pf</span><span class="p">.</span><span class="nf">estimate</span><span class="p">(</span><span class="n">particles</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span>
-    <span class="n">p1</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="nf">scatter</span><span class="p">(</span><span class="n">robot_position</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">robot_position</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s1">'+'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'k'</span><span class="p">)</span>
-    <span class="n">p2</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="nf">scatter</span><span class="p">(</span><span class="n">mean</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">mean</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s1">'s'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'r'</span><span class="p">)</span>
 
     <span class="c1"># Resampling</span>
     <span class="k">if</span> <span class="n">pf</span><span class="p">.</span><span class="nf">effective_particles</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span> <span class="o">&lt;</span> <span class="no">N</span> <span class="o">/</span> <span class="mi">2</span><span class="p">:</span>
@@ -187,7 +185,7 @@ an arbitrary grid. This example is adapted from
     <img src="https://i.ibb.co/p46kK2S/Screen-Shot-2020-11-08-at-12-11-26-PM.png" alt="Alt Text" /></p>
 </div>
 
-  </div><a class="u-url" href="/gppf/2020/11/04/GPPF.html" hidden></a>
+  </div><a class="u-url" href="/gppf/2020/11/05/GPPF.html" hidden></a>
 </article>
 
       </div>

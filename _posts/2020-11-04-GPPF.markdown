@@ -1,13 +1,13 @@
 ---
 layout: post
 title:  "Gaussian Process Particle Filter (GPPF)"
-date:   2020-11-04 19:40:06 -0500
+date:   2020-11-05 19:40:06 -0500
 categories: GPPF
 ---
 ### Description 
-
+_June 2020-Present_<br/>
 Topic: Enhancing Particle Filtering using Gaussian Processes
-- Collaborating with Dr. Pau Closas and Dr. Tales Imbiriba to present an approach to Bayesian recursive estimation 
+- Collaborating under Dr. Pau Closas and Dr. Tales Imbiriba to present an approach to Bayesian recursive estimation 
 (Bayesian filtering) that leverages both Sequential Monte Carlo methods 
 (particle filters) and Gaussian process regression in the context of Bayesian inference.
 - Developing a “Gaussian Process Particle Filter” (GPPF) algorithm utilizing Python and MATLAB 
@@ -124,10 +124,8 @@ for iteration in range(num_of_iterations):
 
     pf.gaussian_process_reg(particles=particles, weights=weights)
 
-    # state estimation
+    # State estimation
     mean = pf.estimate(particles, weights)
-    p1 = plt.scatter(robot_position[0], robot_position[1], marker='+', color='k')
-    p2 = plt.scatter(mean[0], mean[1], marker='s', color='r')
 
     # Resampling
     if pf.effective_particles(weights) < N / 2:

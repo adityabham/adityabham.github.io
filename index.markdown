@@ -13,7 +13,9 @@ layout: page
 </div>
 
 Hi I'm Aditya. Welcome to my online portfolio! I'm currently an undergraduate student at Northeastern University studying 
-Electrical Engineering and an intern at The Charles Stark Draper Laboratory within the Machine Intelligence Group. 
+Electrical Engineering and an intern at The Charles Stark Draper Laboratory within the Machine Intelligence Group. I'm originally 
+from Livingston, New Jersey and graduated from Livingston High School in 2016.  
+
 My research interests include: Machine Learning, Bayesian Statistics & Signal Processing. 
 
 To request a resume, please feel free to contact me at my email: <bhamidipati.a@northeastern.edu>
