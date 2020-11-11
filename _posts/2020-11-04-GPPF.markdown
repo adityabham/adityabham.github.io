@@ -6,7 +6,7 @@ categories: GPPF
 ---
 ### Description 
 _June 2020-Present_<br/>
-Paper: [Enhancing Particle Filtering using Gaussian Processes](https://ieeexplore.ieee.org/abstract/document/9190631)
+IEEE Paper: [Enhancing Particle Filtering using Gaussian Processes](https://ieeexplore.ieee.org/abstract/document/9190631)
 - Collaborating under Dr. Pau Closas and Dr. Tales Imbiriba to present an approach to Bayesian recursive estimation 
 (Bayesian filtering) that leverages both Sequential Monte Carlo methods 
 (particle filters) and Gaussian process regression in the context of Bayesian inference.

@@ -5,5 +5,38 @@ date:   2020-11-04 19:40:06 -0500
 categories: Capstone
 ---
 ### Description 
+_June 2020-Present_<br/>
+Northeastern University Department of Electrical & Computer Engineering                                           
+- Currently collaborating with a team of five other ECE students to develop a novel solution regarding addressing and enforcing social distancing requirements through use of wireless sensor networks, machine learning algorithms, and the Internet of Things (IoT).
+- Goal: Create a system to track human movement in public spaces, identify chokepoints and high-traffic hotspots, and provide visual and auditory indicators that enforce social distancing.
 
-Coming Soon
+<div class="post-content">
+    <p align="center">
+    <img src="https://i.ibb.co/xznnP2q/ps.jpg" alt="Alt Text" /></p>
+</div>
+
+### Overall System Design
+<div class="post-content">
+    <p align="center">
+    <img src="https://i.ibb.co/yRWjxQn/vva.png" alt="Alt Text" /></p>
+</div>
+
+### High-Level Software Architecture
+
+As a member of a the high-level software sub-team, my responsibilities include: <br/> 
+- Helping develop a suite of motion-prediction (predictor) algorithms that model how people intend to move through the given space based on kinematic, behavioral, and social criteria.
+- Creating a multi-classifier machine learning model the accepts predictions from the predictor algorithms to determine which algorithm is most accurate given the situational and environmental context.
+
+`Predictor Algorithm Architecture`
+<div class="post-content">
+    <p align="center">
+    <img src="https://i.ibb.co/NTzqsvx/pds.png" alt="Alt Text" />
+    </p>
+</div>
+
+`Core ML Model`
+<div class="post-content">
+    <p align="center">
+    <img src="https://i.ibb.co/RPx6r9d/ovr.png" alt="Alt Text" />
+    </p>
+</div>
