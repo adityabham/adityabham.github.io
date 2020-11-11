@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-11-11T11:54:35-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Aditya Bhamidipati</title><subtitle>Electrical Engineering Student at Northeastern University | Machine Intelligence Intern at Draper</subtitle><entry><title type="html">Gaussian Process Particle Filter (GPPF)</title><link href="http://localhost:4000/gppf/2020/11/05/GPPF.html" rel="alternate" type="text/html" title="Gaussian Process Particle Filter (GPPF)" /><published>2020-11-05T19:40:06-05:00</published><updated>2020-11-05T19:40:06-05:00</updated><id>http://localhost:4000/gppf/2020/11/05/GPPF</id><content type="html" xml:base="http://localhost:4000/gppf/2020/11/05/GPPF.html">&lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-11-11T14:16:40-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Aditya Bhamidipati</title><subtitle>Electrical Engineering Student at Northeastern University | Machine Intelligence Intern at Draper</subtitle><entry><title type="html">Gaussian Process Particle Filter (GPPF)</title><link href="http://localhost:4000/gppf/2020/11/05/GPPF.html" rel="alternate" type="text/html" title="Gaussian Process Particle Filter (GPPF)" /><published>2020-11-05T19:40:06-05:00</published><updated>2020-11-05T19:40:06-05:00</updated><id>http://localhost:4000/gppf/2020/11/05/GPPF</id><content type="html" xml:base="http://localhost:4000/gppf/2020/11/05/GPPF.html">&lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;June 2020-Present&lt;/em&gt;&lt;br /&gt;
-IEEE Paper: &lt;a href=&quot;https://ieeexplore.ieee.org/abstract/document/9190631&quot;&gt;Enhancing Particle Filtering using Gaussian Processes&lt;/a&gt;&lt;/p&gt;
+IEEE Paper: &lt;a href=&quot;https://ieeexplore.ieee.org/abstract/document/9190631&quot;&gt;Enhancing Particle Filtering using Gaussian Processes&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Collaborating under Dr. Pau Closas and Dr. Tales Imbiriba to present an approach to Bayesian recursive estimation 
+  &lt;li&gt;Collaborating under &lt;a href=&quot;https://ieeexplore.ieee.org/author/37294448100&quot;&gt;Dr. Pau Closas&lt;/a&gt; and 
+&lt;a href=&quot;https://ieeexplore.ieee.org/author/37085643187&quot;&gt;Dr. Tales Imbiriba&lt;/a&gt; to present an approach to Bayesian recursive estimation 
 (Bayesian filtering) that leverages both Sequential Monte Carlo methods 
 (particle filters) and Gaussian process regression in the context of Bayesian inference.&lt;/li&gt;
   &lt;li&gt;Developing a “Gaussian Process Particle Filter” (GPPF) algorithm utilizing Python and MATLAB 
@@ -161,7 +162,7 @@ Northeastern University Department of Electrical &amp;amp; Computer Engineering&
   &lt;li&gt;Creating a multi-classifier machine learning model the accepts predictions from the predictor algorithms to determine which algorithm is most accurate given the situational and environmental context.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Predictor Algorithm Architecture&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Predictor Algorithm Suite&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&quot;post-content&quot;&gt;
     &lt;p align=&quot;center&quot;&gt;
     &lt;img src=&quot;https://i.ibb.co/NTzqsvx/pds.png&quot; alt=&quot;Alt Text&quot; /&gt;

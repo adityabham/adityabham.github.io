@@ -27,7 +27,7 @@ As a member of a the high-level software sub-team, my responsibilities include: 
 - Helping develop a suite of motion-prediction (predictor) algorithms that model how people intend to move through the given space based on kinematic, behavioral, and social criteria.
 - Creating a multi-classifier machine learning model the accepts predictions from the predictor algorithms to determine which algorithm is most accurate given the situational and environmental context.
 
-`Predictor Algorithm Architecture`
+`Predictor Algorithm Suite`
 <div class="post-content">
     <p align="center">
     <img src="https://i.ibb.co/NTzqsvx/pds.png" alt="Alt Text" />
