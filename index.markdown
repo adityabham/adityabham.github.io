@@ -17,3 +17,4 @@ from Livingston, New Jersey and graduated from Livingston High School in 2016.
 My research interests include: Machine Learning, Bayesian Statistics & Signal Processing. 
 
 To request a resume, please feel free to contact me at my email: <bhamidipati.a@northeastern.edu>
+
