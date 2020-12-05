@@ -7,7 +7,7 @@ permalink: /Work_Experience/
 _Cambridge, MA_ _January 2020-Present_                        
 ***Machine Intelligence Intern***<br/>
 Implements machine learning and data analytics pipelines utilizing Python across multiple Internal Research and Development (IRaD) and Government Defense projects. 
-- Utilizes machine learning algorithms including clustering, dimensionality reduction, linear and logistic regressions, Random Forest, and SVMs to develop supervised, semi-supervised and unsupervised learning-based models.
+- Utilizes machine learning algorithms including clustering, dimensionality reduction, linear and logistic regressions, Random Forest, and SVMs to develop supervised and semi-supervised learning-based models.
 - Performs rigorous validation and hyperparameter tuning of machine learning models for statistical evaluation and optimization.
 - Builds APIs to automate data collection. 
 - Current projects include applying sensor fusion-based classification pipelines to enable persistent maritime awareness over ocean areas utilizing a distributed sensor network, and bioinformatics-based pipelines to predict virus family differentiation.
@@ -25,7 +25,7 @@ _Franklin, MA_ _January 2019-June 2019_
 ***Global Supplier Process Engineering Intern***<br/>
 Worked with the Global Supplier Quality Engineering (GSQE) team to test/develop computer servers that specialize in the storage, protection, and qualification of client data and enable virtualization and cloud computing.
 - Created stress/burden evaluation testware utilizing Python for server validation.
-- Performed hardware performance evaluation and characterization on Third Party products. 
+- Performed hardware performance evaluation and characterization on Third-Party products. 
 - Developed server testing plans with direction from the GSQE Engineering team and ensured execution.
 
 #### [SPEC Process Engineering & Construction](https://www.spec-eng.com/) 

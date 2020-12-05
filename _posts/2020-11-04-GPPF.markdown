@@ -14,7 +14,8 @@ IEEE Paper: [Enhancing Particle Filtering using Gaussian Processes](https://ieee
 - Developing a “Gaussian Process Particle Filter” (GPPF) algorithm utilizing Python and MATLAB 
 to more accurately approximate the posterior probability distribution of some stochastic process 
 given a set of observed measurements.
-- Currently in the process of creating a robot localization simulation to quantify the performance of the GPPF.
+- Creating a simulation of a robot moving throughout a grid where the GPPF is utilized to 
+estimate and track the robot’s position quantifying performance.
 
 ### Algorithm Architecture  
 

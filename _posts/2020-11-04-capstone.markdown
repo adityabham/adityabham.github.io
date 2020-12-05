@@ -7,8 +7,11 @@ categories: Capstone
 ### Description 
 _June 2020-Present_<br/>
 Northeastern University Department of Electrical & Computer Engineering                                           
-- Currently collaborating with a team of five other ECE students to develop a novel solution regarding addressing and enforcing social distancing requirements through use of wireless sensor networks, machine learning algorithms, and the Internet of Things (IoT).
-- Goal: Create a system to track human movement in public spaces, identify chokepoints and high-traffic hotspots, and provide visual and auditory indicators that enforce social distancing.
+- Currently collaborating with a team of five other ECE students to develop a novel solution regarding addressing 
+and enforcing social distancing requirements through the use of wireless sensor networks, machine learning algorithms, 
+and the Internet of Things (IoT).
+- Goal: Create a system to track human movement in public spaces, identify choke points and high-traffic hotspots, 
+and provide visual and auditory indicators that enforce social distancing.
 
 <div class="post-content">
     <p align="center">
@@ -24,8 +27,10 @@ Northeastern University Department of Electrical & Computer Engineering
 ### High-Level Software Architecture
 
 As a member of the high-level software sub-team, my responsibilities include: <br/> 
-- Helping develop a suite of motion-prediction (predictor) algorithms that model how people intend to move through the given space based on kinematic, behavioral, and social criteria.
-- Creating a multi-classifier machine learning model the accepts predictions from the predictor algorithms to determine which algorithm is most accurate given the situational and environmental context.
+- Helping develop a suite of motion-prediction (predictor) algorithms that model how people intend to move through 
+a given space based on kinematic, behavioral, and social criteria.
+- Creating a multi-classifier machine learning model the accepts predictions from the predictor algorithms to 
+determine which algorithm is most accurate given the situational and environmental context.
 
 `Predictor Algorithm Suite`
 <div class="post-content">

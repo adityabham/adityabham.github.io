@@ -7,8 +7,10 @@ categories: sustainability
 ### Description 
 _January 2017-April 2017_<br/>
 - Collaborated with a team of engineering students to create an initial prototype of a hydroponic greenhouse system.
-- Generated an interactive user interface, implementing MATLAB and C++, built to provide users with information regarding the design.
-- Designed the water pump relay systems by configuring and coding Arduino sensors to create time and light based water cycles.
+- Generated an interactive user interface, implementing MATLAB and C++, built to provide users with information regarding 
+the design.
+- Designed the water pump relay systems by configuring and coding Arduino sensors to create time and light-based water 
+cycles.
 
 ### Design
 <div class="post-content">
