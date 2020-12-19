@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-12-05T16:11:46-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Aditya Bhamidipati</title><subtitle>Electrical Engineering Student at Northeastern University | Machine Intelligence Intern at Draper</subtitle><entry><title type="html">Gaussian Process Particle Filter (GPPF)</title><link href="http://localhost:4000/gppf/2020/11/05/GPPF.html" rel="alternate" type="text/html" title="Gaussian Process Particle Filter (GPPF)" /><published>2020-11-05T19:40:06-05:00</published><updated>2020-11-05T19:40:06-05:00</updated><id>http://localhost:4000/gppf/2020/11/05/GPPF</id><content type="html" xml:base="http://localhost:4000/gppf/2020/11/05/GPPF.html">&lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
-&lt;p&gt;&lt;em&gt;June 2020-Present&lt;/em&gt;&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-12-19T12:00:40-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Aditya Bhamidipati</title><subtitle>Electrical Engineering Student at Northeastern University | Research Interests: Machine Learning, Bayesian Statistics &amp; Signal Processing</subtitle><entry><title type="html">Gaussian Process Particle Filter (GPPF)</title><link href="http://localhost:4000/gppf/2020/11/05/GPPF.html" rel="alternate" type="text/html" title="Gaussian Process Particle Filter (GPPF)" /><published>2020-11-05T19:40:06-05:00</published><updated>2020-11-05T19:40:06-05:00</updated><id>http://localhost:4000/gppf/2020/11/05/GPPF</id><content type="html" xml:base="http://localhost:4000/gppf/2020/11/05/GPPF.html">&lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;June 2020-December 2020&lt;/em&gt;&lt;br /&gt;
 IEEE Paper: &lt;a href=&quot;https://ieeexplore.ieee.org/abstract/document/9190631&quot;&gt;Enhancing Particle Filtering using Gaussian Processes&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Collaborating under &lt;a href=&quot;https://ieeexplore.ieee.org/author/37294448100&quot;&gt;Dr. Pau Closas&lt;/a&gt; and 
+  &lt;li&gt;Collaborated under &lt;a href=&quot;https://ieeexplore.ieee.org/author/37294448100&quot;&gt;Dr. Pau Closas&lt;/a&gt; and 
 &lt;a href=&quot;https://ieeexplore.ieee.org/author/37085643187&quot;&gt;Dr. Tales Imbiriba&lt;/a&gt; to present an approach to Bayesian recursive estimation 
 (Bayesian filtering) that leverages both Sequential Monte Carlo methods 
 (particle filters) and Gaussian process regression in the context of Bayesian inference.&lt;/li&gt;
-  &lt;li&gt;Developing a “Gaussian Process Particle Filter” (GPPF) algorithm utilizing Python and MATLAB 
+  &lt;li&gt;Developed a “Gaussian Process Particle Filter” (GPPF) algorithm utilizing Python and MATLAB 
 to more accurately approximate the posterior probability distribution of some stochastic process 
 given a set of observed measurements.&lt;/li&gt;
-  &lt;li&gt;Creating a simulation of a robot moving throughout a grid where the GPPF is utilized to 
+  &lt;li&gt;Created a simulation of a robot moving throughout a grid where the GPPF is utilized to 
 estimate and track the robot’s position quantifying performance.&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -136,12 +136,12 @@ an arbitrary grid. This example is adapted from
 &lt;div class=&quot;post-content&quot;&gt;
     &lt;p align=&quot;center&quot;&gt;
     &lt;img src=&quot;https://i.ibb.co/p46kK2S/Screen-Shot-2020-11-08-at-12-11-26-PM.png&quot; alt=&quot;Alt Text&quot; /&gt;&lt;/p&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="GPPF" /><summary type="html">Description June 2020-Present IEEE Paper: Enhancing Particle Filtering using Gaussian Processes Collaborating under Dr. Pau Closas and Dr. Tales Imbiriba to present an approach to Bayesian recursive estimation (Bayesian filtering) that leverages both Sequential Monte Carlo methods (particle filters) and Gaussian process regression in the context of Bayesian inference. Developing a “Gaussian Process Particle Filter” (GPPF) algorithm utilizing Python and MATLAB to more accurately approximate the posterior probability distribution of some stochastic process given a set of observed measurements. Creating a simulation of a robot moving throughout a grid where the GPPF is utilized to estimate and track the robot’s position quantifying performance.</summary></entry><entry><title type="html">vIRal Vision Capstone Project</title><link href="http://localhost:4000/capstone/2020/11/04/capstone.html" rel="alternate" type="text/html" title="vIRal Vision Capstone Project" /><published>2020-11-04T19:40:06-05:00</published><updated>2020-11-04T19:40:06-05:00</updated><id>http://localhost:4000/capstone/2020/11/04/capstone</id><content type="html" xml:base="http://localhost:4000/capstone/2020/11/04/capstone.html">&lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
-&lt;p&gt;&lt;em&gt;June 2020-Present&lt;/em&gt;&lt;br /&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="GPPF" /><summary type="html">Description June 2020-December 2020 IEEE Paper: Enhancing Particle Filtering using Gaussian Processes Collaborated under Dr. Pau Closas and Dr. Tales Imbiriba to present an approach to Bayesian recursive estimation (Bayesian filtering) that leverages both Sequential Monte Carlo methods (particle filters) and Gaussian process regression in the context of Bayesian inference. Developed a “Gaussian Process Particle Filter” (GPPF) algorithm utilizing Python and MATLAB to more accurately approximate the posterior probability distribution of some stochastic process given a set of observed measurements. Created a simulation of a robot moving throughout a grid where the GPPF is utilized to estimate and track the robot’s position quantifying performance.</summary></entry><entry><title type="html">vIRal Vision Capstone Project</title><link href="http://localhost:4000/capstone/2020/11/04/capstone.html" rel="alternate" type="text/html" title="vIRal Vision Capstone Project" /><published>2020-11-04T19:40:06-05:00</published><updated>2020-11-04T19:40:06-05:00</updated><id>http://localhost:4000/capstone/2020/11/04/capstone</id><content type="html" xml:base="http://localhost:4000/capstone/2020/11/04/capstone.html">&lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;June 2020-December 2020&lt;/em&gt;&lt;br /&gt;
 Northeastern University Department of Electrical &amp;amp; Computer Engineering&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Currently collaborating with a team of five other ECE students to develop a novel solution regarding addressing 
-and enforcing social distancing requirements through the use of wireless sensor networks, machine learning algorithms, 
+  &lt;li&gt;Collaborated with a team of five other ECE students to develop a novel solution regarding addressing and 
+enforcing social distancing requirements through the use of wireless sensor networks, machine learning algorithms, 
 and the Internet of Things (IoT).&lt;/li&gt;
   &lt;li&gt;Goal: Create a system to track human movement in public spaces, identify choke points and high-traffic hotspots, 
 and provide visual and auditory indicators that enforce social distancing.&lt;/li&gt;
@@ -160,12 +160,12 @@ and provide visual and auditory indicators that enforce social distancing.&lt;/l
 
 &lt;h3 id=&quot;high-level-software-architecture&quot;&gt;High-Level Software Architecture&lt;/h3&gt;
 
-&lt;p&gt;As a member of the high-level software sub-team, my responsibilities include: &lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;As a member of the high-level software sub-team, my responsibilities included: &lt;br /&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Helping develop a suite of motion-prediction (predictor) algorithms that model how people intend to move through 
 a given space based on kinematic, behavioral, and social criteria.&lt;/li&gt;
-  &lt;li&gt;Creating a multi-classifier machine learning model the accepts predictions from the predictor algorithms to 
-determine which algorithm is most accurate given the situational and environmental context.&lt;/li&gt;
+  &lt;li&gt;Creating a multi-classifier machine learning model the accepts predictions from the predictor algorithms 
+enabling the system to determine which algorithm is most accurate given the situational and environmental context.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Predictor Algorithm Suite&lt;/code&gt;&lt;/p&gt;
@@ -175,12 +175,19 @@ determine which algorithm is most accurate given the situational and environment
     &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Core ML Model&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Core ML Model Design&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&quot;post-content&quot;&gt;
     &lt;p align=&quot;center&quot;&gt;
     &lt;img src=&quot;https://i.ibb.co/RPx6r9d/ovr.png&quot; alt=&quot;Alt Text&quot; /&gt;
     &lt;/p&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="Capstone" /><summary type="html">Description June 2020-Present Northeastern University Department of Electrical &amp;amp; Computer Engineering Currently collaborating with a team of five other ECE students to develop a novel solution regarding addressing and enforcing social distancing requirements through the use of wireless sensor networks, machine learning algorithms, and the Internet of Things (IoT). Goal: Create a system to track human movement in public spaces, identify choke points and high-traffic hotspots, and provide visual and auditory indicators that enforce social distancing.</summary></entry><entry><title type="html">Hydroponic Greenhouse</title><link href="http://localhost:4000/sustainability/2020/11/03/sustainability.html" rel="alternate" type="text/html" title="Hydroponic Greenhouse" /><published>2020-11-03T19:40:06-05:00</published><updated>2020-11-03T19:40:06-05:00</updated><id>http://localhost:4000/sustainability/2020/11/03/sustainability</id><content type="html" xml:base="http://localhost:4000/sustainability/2020/11/03/sustainability.html">&lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Random Forest Modeling Outline&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;post-content&quot;&gt;
+    &lt;p align=&quot;center&quot;&gt;
+    &lt;img src=&quot;https://i.ibb.co/SXFpJ6b/642468-A6-962-B-4-CA9-9-FC2-3-C4-A34-FF92-CD-1-201-a.jpg&quot; alt=&quot;Alt Text&quot; /&gt;
+    &lt;/p&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="Capstone" /><summary type="html">Description June 2020-December 2020 Northeastern University Department of Electrical &amp;amp; Computer Engineering Collaborated with a team of five other ECE students to develop a novel solution regarding addressing and enforcing social distancing requirements through the use of wireless sensor networks, machine learning algorithms, and the Internet of Things (IoT). Goal: Create a system to track human movement in public spaces, identify choke points and high-traffic hotspots, and provide visual and auditory indicators that enforce social distancing.</summary></entry><entry><title type="html">Hydroponic Greenhouse</title><link href="http://localhost:4000/sustainability/2020/11/03/sustainability.html" rel="alternate" type="text/html" title="Hydroponic Greenhouse" /><published>2020-11-03T19:40:06-05:00</published><updated>2020-11-03T19:40:06-05:00</updated><id>http://localhost:4000/sustainability/2020/11/03/sustainability</id><content type="html" xml:base="http://localhost:4000/sustainability/2020/11/03/sustainability.html">&lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;January 2017-April 2017&lt;/em&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Collaborated with a team of engineering students to create an initial prototype of a hydroponic greenhouse system.&lt;/li&gt;

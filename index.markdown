@@ -11,11 +11,10 @@ title: About Me
 </div>
 
 Hi, I’m Aditya. Welcome to my personal website! I’m currently an undergraduate student at Northeastern University 
-studying Electrical Engineering and an intern at The Charles Stark Draper Laboratory within the Machine Intelligence 
-Group. I am passionate about the areas of machine learning, Bayesian statistics & signal processing and am hoping to 
-attend graduate school in the Fall of 2021. I’m originally from Livingston, New Jersey, and graduated from Livingston 
-High School in 2016. In my free time, I enjoy watching/playing basketball, reading, producing music, 
-and spending time with my friends.
+studying Electrical Engineering. I am passionate about the areas of machine learning, Bayesian statistics & signal 
+processing and am hoping to attend graduate school in the Fall of 2021. I’m originally from Livingston, New Jersey, 
+and graduated from Livingston High School in 2016. In my free time, I enjoy watching/playing basketball, reading, 
+producing music, and spending time with my friends.
 
 Some of the major projects that I have worked on since starting engineering school: [Projects/Research](https://adityabham.github.io/Proj/)
 

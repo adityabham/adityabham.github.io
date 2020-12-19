@@ -5,16 +5,16 @@ date:   2020-11-05 19:40:06 -0500
 categories: GPPF
 ---
 ### Description 
-_June 2020-Present_<br/>
+_June 2020-December 2020_<br/>
 IEEE Paper: [Enhancing Particle Filtering using Gaussian Processes](https://ieeexplore.ieee.org/abstract/document/9190631)<br/>
-- Collaborating under [Dr. Pau Closas](https://ieeexplore.ieee.org/author/37294448100) and 
+- Collaborated under [Dr. Pau Closas](https://ieeexplore.ieee.org/author/37294448100) and 
 [Dr. Tales Imbiriba](https://ieeexplore.ieee.org/author/37085643187) to present an approach to Bayesian recursive estimation 
 (Bayesian filtering) that leverages both Sequential Monte Carlo methods 
 (particle filters) and Gaussian process regression in the context of Bayesian inference.
-- Developing a “Gaussian Process Particle Filter” (GPPF) algorithm utilizing Python and MATLAB 
+- Developed a “Gaussian Process Particle Filter” (GPPF) algorithm utilizing Python and MATLAB 
 to more accurately approximate the posterior probability distribution of some stochastic process 
 given a set of observed measurements.
-- Creating a simulation of a robot moving throughout a grid where the GPPF is utilized to 
+- Created a simulation of a robot moving throughout a grid where the GPPF is utilized to 
 estimate and track the robot’s position quantifying performance.
 
 ### Algorithm Architecture  
