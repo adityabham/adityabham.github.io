@@ -15,7 +15,7 @@ and optimization.
 - Built APIs to automate data collection. 
 - Projects included:
     - Applying sensor fusion-based detection pipelines to enable persistent maritime awareness over 
-    ocean areas utilizing a distributed sensor network, 
+    ocean areas utilizing a distributed sensor network. 
     - Creating bioinformatics-based pipelines to predict virus family differentiation.
     - Implementing scalable statistical techniques for the purpose of applying remote sensing-based 
     technologies to detect underground structures on a global scale
