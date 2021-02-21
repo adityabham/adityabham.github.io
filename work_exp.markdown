@@ -33,9 +33,8 @@ _Franklin, MA_ _January 2019-June 2019_
 ***Global Supplier Process Engineering Intern***<br/>
 Worked with the Global Supplier Quality Engineering (GSQE) team to test/develop computer servers that 
 specialize in the storage, protection, and qualification of client data and enable virtualization and cloud computing.
-- Created stress/burden evaluation testware utilizing Python for server validation.
+- Automated stress/burden evaluation testing utilizing Python for server validation.
 - Performed hardware performance evaluation and characterization on Third-Party products. 
-- Developed server testing plans with direction from the GSQE team and ensured execution.
 
 #### [SPEC Process Engineering & Construction](https://www.spec-eng.com/) 
 _Burlington, MA_ _January 2018-June 2018_                 
