@@ -25,5 +25,5 @@ Companies I have interned at throughout my undergraduate study: <br/>
 -[SPEC Process Engineering & Construction](https://www.spec-eng.com/) <br/>
 -[Capgemini US LLC](https://www.capgemini.com/us-en/)
 
-To request a resume, please feel free to contact me at my email: <bhamidipati.a@northeastern.edu>
+To request a resume, please feel free to contact me at my email: <adityabham98@gmail.com>
 

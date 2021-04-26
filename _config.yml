@@ -19,7 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Aditya Bhamidipati
-email: bhamidipati.a@northeastern.edu
+email: adityabham98@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Incoming MS Candidate at Duke University | Research Interests: Machine Learning, Bayesian Statistics & Signal Processing
 baseurl: "" # the subpath of your site, e.g. /blog
