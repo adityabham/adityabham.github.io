@@ -10,7 +10,7 @@ title: About Me
     <img src="https://i.ibb.co/gVMmYmT/Screen-Shot-2020-11-08-at-1-11-59-AM.png" alt="Alt Text" height="350" /></p>
 </div>
 
-Hi, I’m Aditya. Welcome to my personal website! I’m currently a senior at Northeastern University 
+Hi, I’m Aditya. Welcome to my personal website! I’m currently a graduating senior at Northeastern University 
 studying Electrical Engineering. I am passionate about the areas of machine learning, Bayesian statistics & signal 
 processing and will be attending Duke University for grad school in the Fall of 2021. At Duke I will be pursuing an MS degree 
 in Electrical and Computer Engineering, concentrating in machine learning and data analytics. I’m originally from Livingston, 
