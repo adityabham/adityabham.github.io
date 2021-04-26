@@ -12,7 +12,7 @@ title: About Me
 
 Hi, I’m Aditya. Welcome to my personal website! I’m currently an undergraduate student at Northeastern University 
 studying Electrical Engineering. I am passionate about the areas of machine learning, Bayesian statistics & signal 
-processing and am hoping to attend graduate school in the Fall of 2021. I’m originally from Livingston, New Jersey, 
+processing and will be attending Duke University for grad school in the Fall of 2021. I’m originally from Livingston, New Jersey, 
 and graduated from Livingston High School in 2016. In my free time, I enjoy watching/playing basketball, reading, 
 producing music, and spending time with my friends.
 
