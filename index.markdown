@@ -12,9 +12,9 @@ title: About Me
 
 Hi, I’m Aditya. Welcome to my personal website! I recently graduated from Northeastern University 
 (May 2021) with a Bachelor's Degree in Electrical Engineering. I am passionate about the areas of 
-machine learning, Bayesian statistics, signal processing, and high performance computing and am 
-currently a student at Duke University pursuing a Master's  Degree in Electrical and Computer 
-Engineering, specializing in machine learning and data analytics. I’m originally from Livingston, 
+machine learning, Bayesian statistics, programming and high performance computing and am currently 
+a student at Duke University pursuing a Master's Degree in Electrical and Computer Engineering, 
+specializing in machine learning and data analytics. I’m originally from Livingston, 
 New Jersey, and graduated from Livingston High School in 2016. In my free time, I enjoy 
 watching/playing basketball, reading, producing music, and spending time with my friends.
 
