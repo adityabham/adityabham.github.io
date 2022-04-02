@@ -30,7 +30,7 @@ EECE 2520: Fundamentals of Linear Systems
 
 #### [Dell EMC](https://www.delltechnologies.com/en-us/index.htm) 
 _Franklin, MA_ _January 2019-June 2019_                 
-***Global Supplier Process Engineering Intern***<br/>
+***Technical Intern***<br/>
 Worked with the Global Supplier Quality Engineering (GSQE) team to test/develop computer servers that 
 specialize in the storage, protection, and qualification of client data and enable virtualization and cloud computing.
 - Automated stress/burden evaluation testing utilizing Python for server validation.
